@@ -19,10 +19,11 @@ let divBoxesNewRef = document.createElement('div');
 
 
 function createBoxes(amount) {
+  
   divBoxesNewRef.style.cssText = 'height:30px;width:30px';
   divBoxesNewRef.style.backgroundColor = getRandomHexColor();
 
-  elem.insertAdjacentElement(where, newElem) 
+  // elem.insertAdjacentElement(where, newElem) 
   
   // divBoxesNewRef.currentTarget.value + 'amount*10px'
 
@@ -30,7 +31,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  divBoxesNewRef.innerHTML = "";;
+  divBoxesRef.innerHTML = '';
 }
 
 function getRandomHexColor() {
