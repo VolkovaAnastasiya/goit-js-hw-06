@@ -3,7 +3,12 @@ const spanEl = document.querySelector('span#name-output');
 
 inputEl.addEventListener('input', onInput);
 
-function onInput (event) {
- spanEl.textContent = event.currentTarget.value;
+function onInput(event) {
+   
+    spanEl.textContent = event.currentTarget.value;
+    
+     if (spanEl.textContent === '') {
+        spanEl.textContent = 'Anonymous'
+    }
        
 };
