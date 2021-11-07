@@ -10,9 +10,3 @@ categoriesEl.forEach(el => {
 })
 
 console.log(...itemEl);
-
-
-
-// images.map(({url, alt}) => { galleryEl.insertAdjacentHTML(
-//   'beforeend',    `<li><img src = "${url}" alt = "${alt}"  width = 340  /></li>`)});
-// console.log(galleryEl);
