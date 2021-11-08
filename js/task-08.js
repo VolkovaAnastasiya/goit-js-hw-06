@@ -1,7 +1,4 @@
 const formRef = document.querySelector('.login-form');
-const inputEmailRef = document.querySelector('input[name="email"]');
-const inputPasswordRef = document.querySelector('input[name="password"]');
-const btnSubmitRef = document.querySelector('button[type="submit"]');
 
 formRef.addEventListener("submit", onHandleSubmit);
 
@@ -12,16 +9,12 @@ function onHandleSubmit(event){
     elements: { email, password }
   } = event.currentTarget;
 
-  const formList = `Login: ${email.value}, Password: ${password.value}`
-
-  if (email.value === "" || password.value === "" || email.value === null|| password.value === null) {
-    alert("Please fill in all the fields!");
-    event.currentTarget.reset();
-    return;
-    
+  if (email.value === "" || password.value === "") {
+    return alert("Please fill in all the fields!");
   }
 
-  alert(formList);
+  const formList = {email: email.value ,  password: password.value};
+
   console.log(formList)
   event.currentTarget.reset();
 };
@@ -30,6 +23,10 @@ function onHandleSubmit(event){
 
 
 
+
+// const formRef = document.querySelector('.login-form');
+// const inputEmailRef = document.querySelector('input[name="email"]');
+// const inputPasswordRef = document.querySelector('input[name="password"]');
 // function onHandleSubmit(event){
 //     event.preventDefault();
 //     inputEmailRef.textContent = event.currentTarget.value;
