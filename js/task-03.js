@@ -15,29 +15,10 @@ const images = [
 
 
 const galleryEl = document.querySelector('.gallery');
+const newImgArray = ({url, alt}) => {
+return  `<li><img src = "${url}" alt = "${alt}"  width = 340  /></li>`;
+}
 
-images.map(({url, alt}) => { galleryEl.insertAdjacentHTML(
-  'beforeend',    `<li><img src = "${url}" alt = "${alt}"  width = 340  /></li>`)});
+const imageList = images.map(newImgArray).join('');
+galleryEl.insertAdjacentHTML('beforeend', imageList);
 console.log(galleryEl);
-
-
-
-
-
-
-// const galleryEl = document.querySelector('.gallery');
-// const newImgArray = images.map(({url, alt}) => {
-
-// const liEl = document.createElement('li');
-// const imgEl = document.createElement('img');
-// imgEl.src = `${url}`;
-// imgEl.alt = `${alt}`;
-// imgEl.width = 320;
-
-// liEl.appendChild(imgEl);
-// galleryEl.append(liEl)
-// return galleryEl;
-// })
-
-// console.log(galleryEl)
-

@@ -12,13 +12,20 @@ function onHandleSubmit(event){
     elements: { email, password }
   } = event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
-    alert ("Please fill in all the fields!");
+  const formList = `Login: ${email.value}, Password: ${password.value}`
+
+  if (email.value === "" || password.value === "" || email.value === null|| password.value === null) {
+    alert("Please fill in all the fields!");
+    event.currentTarget.reset();
+    return;
+    
   }
 
-  alert (`Login: ${email.value}, Password: ${password.value}`);
+  alert(formList);
+  console.log(formList)
   event.currentTarget.reset();
 };
+
 
 
 
