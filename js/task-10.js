@@ -11,23 +11,24 @@ btnDestroyRef.addEventListener('click', destroyBoxes);
 function onAmountFnc() {
   const amount = document.querySelector('[type="number"]').value;
   createBoxes(amount);
+ 
 }
 
 function createBoxes(amount) {
-  let fragment = document.createDocumentFragment();
+  const fragment = [];
 
   for (let i = 0; i < amount; i += 1) {
-    let divBoxesSize = 30;
+    const divBoxesSize = 30;
     const size = divBoxesSize + i * 10;
-    let divBoxesNewRef = document.createElement('div');
+    const divBoxesNewRef = document.createElement('div');
     divBoxesNewRef.style.cssText = `width: ${size}px; height: ${size}px; backgroundColor: ${divBoxesNewRef.style.backgroundColor})`;
     
     divBoxesNewRef.style.backgroundColor = getRandomHexColor();
-    fragment.appendChild(divBoxesNewRef);
+    fragment.push(divBoxesNewRef);
   }
 
-  divBoxesRef.appendChild(fragment);
- 
+  divBoxesRef.append(...fragment);
+  
 }
 
 function destroyBoxes() {
