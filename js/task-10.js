@@ -28,7 +28,7 @@ function createBoxes(amount) {
   }
 
   divBoxesRef.append(...fragment);
-  
+  inputRef.value = "";
 }
 
 function destroyBoxes() {
